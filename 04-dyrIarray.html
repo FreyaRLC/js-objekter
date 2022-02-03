@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 dyr i array</title>
+  </head>
+  <body>
+    <article>
+      <p></p>
+      <img src="" alt="" />
+    </article>
+    <script>
+      let dyrArray = [
+          {"navn":"gris", "type":"pattedyr", "levested":"svinesti", "billede":"http://mabe-kea.dk/E19/pics/pig.png"},
+          {"navn":"frø", "type":"kvækdyr", "levested":"mudder", "billede":"http://mabe-kea.dk/E19/pics/frog.png"},
+          {"navn":"ræv", "type":"pattedyr", "levested":"skov", "billede":"http://mabe-kea.dk/E19/pics/fox.png"},
+          {"navn":"sild", "type":"fisk", "levested":"havet", "billede":"http://mabe-kea.dk/E19/pics/sild.png"},
+          {"navn":"krokodille", "type":"krybdyr", "levested":"vand", "billede":"http://mabe-kea.dk/E19/pics/kroko.png"}
+      ];
+
+      let dyr = {
+        navn: "gris",
+        type: "pattedyr",
+        billede: "http://mabe-kea.dk/E19/pics/pig.png",
+        levested: "svinefarme",
+      };
+
+      console.log(dyrArray);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const destination = document.querySelector("article");
+        const dyrInfo = `En ${dyr.navn} er et ${dyr.type}, som lever på ${dyr.levested}`;
+        destination.querySelector("p").textContent = dyrInfo;
+        destination.querySelector("img").src = dyr.billede;
+      });
+
+
+    </script>
+  </body>
+</html>

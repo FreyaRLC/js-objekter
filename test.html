@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testdokument</title>
+</head>
+<body>
+    <section id="liste"></section>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        let personer = [
+            {"fornavn": "helle1", "efternavn": "frederiksen1"},
+            {"fornavn": "helle2", "efternavn": "frederiksen2"},
+            {"fornavn": "helle3", "efternavn": "frederiksen3"}
+        ];
+
+        function start(){
+            const listevisning = document.querySelector("#liste");
+            personer.forEach(person =>{
+                listevisning.innerHTML += `<p>${person.fornavn} ${person.efternavn}</p>`
+            })
+        }
+    </script>
+</body>
+</html>
