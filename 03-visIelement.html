@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03 vis i element</title>
+  </head>
+  <body>
+    <article>
+      <h3></h3>
+      <img src="" alt="" />
+      <p>Type: </p>
+      <p>Levested: </p>
+    </article>
+    <script>
+      let dyr = {
+        navn: "gris",
+        type: "pattedyr",
+        billede: "http://mabe-kea.dk/E19/pics/pig.png",
+        levested: "svinefarme",
+      };
+
+      const secondPara = document.querySelector("p:nth-child(4)");
+      // Vi vælger det 4. barn fordi selvom 1 og 2 ikke er p'er bliver de stadig talt???
+
+      let dyrType = document.createTextNode(dyr.type);
+      let dyrLevested = document.createTextNode(dyr.levested);
+
+      console.log(secondPara);
+      document.addEventListener("DOMContentLoaded", () => {
+        const destination = document.querySelector("article");
+        destination.querySelector("h3").textContent = dyr.navn;
+        destination.querySelector("p").appendChild(dyrType);
+        secondPara.appendChild(dyrLevested);
+        destination.querySelector("img").src = dyr.billede;
+      });
+    </script>
+  </body>
+</html>
